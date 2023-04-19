@@ -20,7 +20,7 @@ version: "3.3"
 services: 
   nifi-server:
     environment:
-      SINGLE_USER_CREDENTIALS_USERNAME: nifi_user
+      SINGLE_USER_CREDENTIALS_USERNAME: user_nifi
       SINGLE_USER_CREDENTIALS_PASSWORD: HGd15bvfv8744ghbdhgdv7895agqERAo
     image: apache/nifi:1.19.0
     container_name: nifi-server
