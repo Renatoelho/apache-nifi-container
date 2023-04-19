@@ -73,7 +73,7 @@ docker-compose -f docker-compose.yaml --compatibility up -d
 docker-compose -f docker-compose.yaml --compatibility down
 ```
 
-> ***Obs.:*** para acessar o Apache Nifi depois que o serviço estiver ativo, acesse: https://localhost:8443 e as credenciais de acesso são os valores existe na variáveis: ***SINGLE_USER_CREDENTIALS_USERNAME*** e ***SINGLE_USER_CREDENTIALS_PASSWORD***
+> ***Obs.:*** para acessar o Apache Nifi depois que o serviço estiver ativo, acesse: https://localhost:8443 e as credenciais de acesso são os valores existentes nas variáveis: ***SINGLE_USER_CREDENTIALS_USERNAME*** e ***SINGLE_USER_CREDENTIALS_PASSWORD***.
 
 # Referências:
 
