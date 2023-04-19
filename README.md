@@ -1,6 +1,6 @@
 # Crie seu servidor Apache NiFi com Docker-compose
 
-Olá, se você está querendo criar um laboratório para lidar com dados em tempo real, uma opção popular é executar o Apache NiFi em contêineres. Ao fazer isso, você pode garantir que as dependências e configurações do host não afetem a capacidade do NiFi de processar fluxos de dados em tempo real. Além disso, a escalabilidade e flexibilidade proporcionadas pelos contêineres permitem que você ajuste facilmente a capacidade do NiFi de acordo com as necessidades de processamento de fluxo de dados.
+Olá, se você está querendo criar um laboratório para lidar com dados em tempo real, uma opção é executar o Apache NiFi em contêineres. Ao fazer isso, você pode garantir que as dependências e configurações do host não afetem a capacidade do NiFi de processar fluxos de dados em tempo real. Além disso, a escalabilidade e flexibilidade proporcionadas pelos contêineres permitem que você ajuste facilmente a capacidade do NiFi de acordo com as necessidades de processamento de fluxo de dados.
 
 No entanto, é importante lembrar que a execução do NiFi em contêineres pode apresentar desafios. Para garantir que tudo funcione corretamente, é necessário planejar cuidadosamente a implantação e configuração dos contêineres, garantindo que o NiFi seja dimensionado e configurado adequadamente para atender às necessidades de processamento de fluxo de dados da organização. Com o planejamento e configuração corretos, você pode executar o Apache NiFi em contêineres com eficiência e eficácia, permitindo que você processe grandes volumes de dados em tempo real.
 
@@ -12,7 +12,7 @@ Docker 23.0.3 (Host)
 Docker-Compose 1.25.0 (Host)
 
 
-# Subindo um serviço Apache Nifi com Docker-compose (yaml)
+# Subindo um serviço Apache Nifi com Docker-compose (Yaml)
 
 ```yaml
 version: "3.3"
@@ -79,4 +79,4 @@ docker-compose -f docker-compose.yaml --compatibility down
 
 Apache/Nifi, ***Docker Hub***. Disponível em: <https://hub.docker.com/r/apache/nifi>. Acesso em: 19 abr. 2023.
 
-How to build a data lake from scratch — Part 1: The setup, ***Victor Seifert***. Disponível em: <https://towardsdatascience.com/how-to-build-a-data-lake-from-scratch-part-1-the-setup-34ea1665a06e>. acesso em: 19 abr. 2023.
+How to build a data lake from scratch - Part 1: The setup, ***Victor Seifert***. Disponível em: <https://towardsdatascience.com/how-to-build-a-data-lake-from-scratch-part-1-the-setup-34ea1665a06e>. acesso em: 19 abr. 2023.
