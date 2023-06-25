@@ -7,9 +7,13 @@ No entanto, é importante lembrar que a execução do NiFi em contêineres pode 
 
 # Requisitos
 
-Docker 23.0.3 (Host)
++ ![Docker](https://img.shields.io/badge/Docker-23.0.3-E3E3E3)
 
-Docker-Compose 1.25.0 (Host)
++ ![Docker-compose](https://img.shields.io/badge/Docker--compose-1.25.0-E3E3E3)
+
++ ![Git](https://img.shields.io/badge/Git-2.25.1%2B-E3E3E3)
+
++ ![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04-E3E3E3)
 
 
 # Subindo um serviço Apache Nifi com Docker-compose (Yaml)
@@ -58,7 +62,7 @@ networks:
 ```
 
 
-# Implementando o Serviço Apache Nifi
+# Implantando o Serviço Apache Nifi
 
 #### Ativando o serviço
 
