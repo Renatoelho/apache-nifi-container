@@ -64,7 +64,18 @@ networks:
 
 # Implantando o Serviço Apache Nifi
 
+#### Clonando o repositório
+
+```bash
+git clone https://github.com/Renatoelho/apache-nifi-container.git apache-nifi-container
+```
+
+
 #### Ativando o serviço
+
+```bash
+cd apache-nifi-container
+```
 
 ```bash
 docker-compose -f docker-compose.yaml --compatibility up -d
