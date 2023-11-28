@@ -2,12 +2,12 @@
 version: "3.3"
 
 services: 
-  nifi-server:
+  apache-nifi:
     environment:
-      SINGLE_USER_CREDENTIALS_USERNAME: user_nifi
+      SINGLE_USER_CREDENTIALS_USERNAME: nifi
       SINGLE_USER_CREDENTIALS_PASSWORD: HGd15bvfv8744ghbdhgdv7895agqERAo
-    image: apache/nifi:1.19.0
-    container_name: nifi-server
+    image: apache/nifi:1.23.0
+    container_name: apache-nifi
     ports:
       - "8443:8443"
     deploy:
@@ -15,26 +15,26 @@ services:
         limits:
           memory: 4G
     restart: on-failure
-    volumes:
-      - nifi-database_repository:/opt/nifi/nifi-current/database_repository
-      - nifi-flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
-      - nifi-content_repository:/opt/nifi/nifi-current/content_repository
-      - nifi-provenance_repository:/opt/nifi/nifi-current/provenance_repository
+    volumes: 
+      - ./nifi/jdbc:/opt/nifi/nifi-current/jdbc
+      - nifi-logs:/opt/nifi/nifi-current/logs
       - nifi-conf:/opt/nifi/nifi-current/conf
       - nifi-state:/opt/nifi/nifi-current/state
-      - ./nifi/logs:/opt/nifi/nifi-current/logs
-      - ./nifi/jdbc:/opt/nifi/nifi-current/jdbc
-      - ./nifi/credentials:/opt/nifi/nifi-current/credentials
+      - nifi-content:/opt/nifi/nifi-current/content_repository
+      - nifi-database:/opt/nifi/nifi-current/database_repository
+      - nifi-flowfile:/opt/nifi/nifi-current/flowfile_repository
+      - nifi-provenance:/opt/nifi/nifi-current/provenance_repository
     networks:
       - nifi-network
 
 volumes:
-    nifi-database_repository:
-    nifi-flowfile_repository:
-    nifi-content_repository:
-    nifi-provenance_repository:
-    nifi-state:
+    nifi-logs:
     nifi-conf:
+    nifi-state:
+    nifi-content:
+    nifi-database:
+    nifi-flowfile:
+    nifi-provenance:
 
 networks:
   nifi-network:
