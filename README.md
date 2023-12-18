@@ -24,8 +24,9 @@ version: "3.3"
 services: 
   apache-nifi:
     environment:
-      SINGLE_USER_CREDENTIALS_USERNAME: nifi
-      SINGLE_USER_CREDENTIALS_PASSWORD: HGd15bvfv8744ghbdhgdv7895agqERAo
+      - SINGLE_USER_CREDENTIALS_USERNAME=nifi
+      - SINGLE_USER_CREDENTIALS_PASSWORD=HGd15bvfv8744ghbdhgdv7895agqERAo
+      - TZ=America/Sao_Paulo
     image: apache/nifi:1.23.0
     container_name: apache-nifi
     ports:
@@ -33,6 +34,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: "0.95"
           memory: 4G
     restart: on-failure
     volumes: 
@@ -92,7 +94,7 @@ docker ps --format "{{.ID}}\t{{.Names}}\t{{.Status}}"
 docker compose -p apache-nifi -f docker-compose.yaml down
 ```
 
-Para acessar o Apache Nifi depois que o serviço estiver ativo, acesse: [https://localhost:8443](https://localhost:8443) e as credenciais de acesso são os valores existentes nas variáveis: ```SINGLE_USER_CREDENTIALS_USERNAME``` e ```SINGLE_USER_CREDENTIALS_PASSWORD```.
+Para acessar o Apache Nifi depois que o serviço estiver ativo, acesse: [https://localhost:8443/nifi/login](https://localhost:8443/nifi/login) e as credenciais de acesso são os valores existentes nas variáveis: ```SINGLE_USER_CREDENTIALS_USERNAME``` e ```SINGLE_USER_CREDENTIALS_PASSWORD```.
 
 
 # Referências:
